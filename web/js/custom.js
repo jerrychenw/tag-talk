@@ -1,0 +1,28 @@
+angular.module('tagtalk',['ngRoute']).config(function($routeProvider){
+   $routeProvider
+   .when('/contactus',{
+     templateUrl:'views/contact.html',
+     controller:'contactController',
+     controllerAs:'contactCtrl'
+   })
+   .when('/home',{
+     templateUrl:'views/home.html',
+     controller:'homeController',
+     controllerAs:'homeCtrl'
+   })
+   .when('/',{
+     redirectTo:'/home'
+   })
+   .when('/portal',{
+     templateUrl:'views/portal.html',
+     controller:'portalController',
+     controllerAs:'portalCtrl'
+   })
+   .otherwise({
+     redirectTo:'/'
+   });
+});
+
+angular.module('tagtalk').controller('mainController',function($scope){
+  $scope.title="Test";
+});
