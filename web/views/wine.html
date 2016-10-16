@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <h1>This is Wine Page</h1>
+    <ul>
+      <li ng-repeat="wine in wineCtrl.wines">
+        {{'Brand: ' + wine.brand +' Make: ' + wine.make}}
+      </li>
+    </ul>
+    <h2 ng-show="wineCtrl.error!==null">
+      {{wineCtrl.error}}
+    </h2>
+  </body>
+</html>
